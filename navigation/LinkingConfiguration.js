@@ -1,4 +1,4 @@
-import * as Linking from "expo-linking"
+import * as Linking from "expo-linking";
 
 const linking = {
   prefixes: [Linking.createURL("/")],
@@ -8,18 +8,47 @@ const linking = {
         screens: {
           SignUp: {
             screens: {
-              SignUpScreen: "SignUp"
-            }
+              SignUpScreen: "SignUp",
+            },
           },
           SignIn: {
             screens: {
-              SignInScreen: "SignIn"
-            }
-          }
-        }
-      }
-    }
-  }
-}
+              SignInScreen: "SignIn",
+            },
+          },
+          UserProfile: {
+            screens: {
+              UserProfile: "user-profile", // Added UserProfile route
+            },
+          },
+          MainTabs: {
+            screens: {
+              Home: {
+                screens: {
+                  HomeScreen: "Home",
+                },
+              },
+              Camera: {
+                screens: {
+                  CameraScreen: "Camera",
+                },
+              },
+              Settings: {
+                screens: {
+                  SettingsScreen: "Settings",
+                },
+              },
+              Profile: {
+                screens: {
+                  MyProfileScreen: "Profile",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+};
 
-export default linking
+export default linking;

@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -20,8 +20,8 @@ import { auth } from "../firebaseConfig";
 * @function HomeScreen
 * @returns {Object} The Home screen component.
 */
-export default function HomeScreen() {
-  const [user, setUser ] = useState(null);
+export default function HomeScreen({ navigation }) { // Ensure navigation prop is available
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const currentUser = auth.currentUser;
@@ -29,6 +29,7 @@ export default function HomeScreen() {
       setUser(currentUser);
     }
   }, []);
+  
   const { collections, loading, reloadCollections } = useCollections(user?.email);
 
   const [collectionName, setCollectionName] = useState("");
@@ -111,6 +112,13 @@ export default function HomeScreen() {
           </View>
         </>
       )}
+      
+      <TouchableOpacity
+        style={styles.profileButton} // Add a style for the profile button
+        onPress={() => navigation.navigate('UserProfile')} // Navigate to UserProfile screen
+      >
+        <Text style={styles.profileButtonText}>Go to Profile</Text>
+      </TouchableOpacity>
 
       <Modal
         animationType="slide"
@@ -248,5 +256,15 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: 15,
     marginTop: 40,
+  },
+  profileButton: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#2e78b7',
+    borderRadius: 5,
+  },
+  profileButtonText: {
+    color: '#fff',
+    fontSize: 16,
   },
 });

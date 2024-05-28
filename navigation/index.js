@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -21,6 +22,9 @@ import { AntDesign } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import ScoreScreen from "../screens/ScoreScreen";
 import ForgotPasswordScreen from "../screens/ForgotPasswordScreen";
+
+// Import the UserProfile component
+import UserProfile from '../components/UserProfile'; // Adjust the path if necessary
 
 const Tab = createBottomTabNavigator();
 
@@ -66,6 +70,11 @@ export default function Navigation() {
             name="MainTabs"
             component={MainTabs}
             options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="UserProfile" // Add UserProfile screen
+            component={UserProfile}
+            options={{ title: "User Profile" }}
           />
         </Stack.Navigator>
       </ClerkLoaded>
