@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>693229136898-6o8ohdnliec9p58f3hd8tcubovbh6br8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.693229136898-6o8ohdnliec9p58f3hd8tcubovbh6br8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBpTm1BYek2XqC7J9HAlU5clhvPhv7TYVg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>693229136898</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.clerk.clerkexpostarter</string>
+	<key>PROJECT_ID</key>
+	<string>drexel-tcg-a7e29</string>
+	<key>STORAGE_BUCKET</key>
+	<string>drexel-tcg-a7e29.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:693229136898:ios:c11b1fe0a62ae638d44b1b</string>
+</dict>
+</plist>
